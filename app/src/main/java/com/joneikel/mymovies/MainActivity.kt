@@ -16,19 +16,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initListeners(binding)
 
     }
 
-    private fun initListeners(binding: ActivityMainBinding) {
-        binding.btnStart.setOnClickListener {
-            if (binding.etTxt.text.isNotEmpty()) showMessage(binding.etTxt.text.toString())
-        }
-    }
-
-    private fun showMessage(toString: String) {
-        binding.etTxt.text.clear()
-        Toast.makeText(this, toString, Toast.LENGTH_LONG).show()
-    }
 
 }
